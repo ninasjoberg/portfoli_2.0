@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'nunito_sansextralight';
+  src: url("../font_nunito_sans_light/nunitosans-extralight-webfont.woff2") format("woff2"), url("../font_nunito_sans_light/nunitosans-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.header {
+  padding: 0 40px;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+.header-links {
+  font-family: 'nunito_sansextralight';
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: fixed; }
+
+.link {
+  font-size: 32px;
+  margin: 20px;
+  text-decoration: none;
+  color: #2c3e50; }

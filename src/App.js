@@ -1,40 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header.js';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './components/Home.js';
 import Projects from './components/Projects.js';
 import About from './components/About.js';
-
-
-const routes = {
-  home: Home,
-  projects: Projects,
-  About: About,
-}
+import Header from './components/Header.js';
 
 
 export default class App extends Component {
 
-  state = {
-    currentPage: 'home',
-  }
+    render() {
 
-
-  changePage = (page) => {
-    this.setState({currentPage: page})
-  }
-
-
-  render() {
-
-    //gives me the name of the "page/view" that will be shown, by using the object "routes" and the currentPage state, and used in the return
-    const Page = routes[this.state.currentPage];
-
-    return (
-      <div className="App">
-        <Header goTo={this.changePage}/>
-        <Home/>
-      </div>
-    );
-  }
+        return (
+            <div className="App">
+                <Router>
+                    <div className="content">
+                        <Header />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/projects" component={Projects} />
+                        <Route exact path="/about" component={About} />
+                    </div>
+                </Router>
+            </div>
+        );
+    }
 }

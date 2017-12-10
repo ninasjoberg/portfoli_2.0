@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-//import './Home.css';
+import Project from './Project.js';
+import databaseImg from '../images/moviedb.jpg';
+import foodGeneratorImg from '../images/middagstips.jpg';
+import openapiImg from '../images/openapi.jpg';
+import plantifyImg from '../images/plantify.jpg';
+import todoImg from '../images/todo_list.jpg';
+import vanillaImg from '../images/vanilla.jpg';
+import challenger from '../images/challenger.jpg';
+import './projects.css';
+
 
 
 export default class Projects extends Component{
@@ -7,9 +16,77 @@ export default class Projects extends Component{
 
     render(){
 
+        const projectsArray = [
+            {
+                time: "sep 2017",
+                image: challenger,
+                course: "Kurs: JavaScript 3",
+                task: `"Skapa en applikation i React där användare kan logga in och ut, lagra och hämta info i Firebase."`,
+                src: "https://challenger-app.now.sh"
+            },
+            {
+                time: "maj 2017",
+                image: "",
+                course: "Kurs: JavaScript 2",
+                task: `"Skapa en applikation som hämtar data från öppna API:er. Fokus på Ajax och designmönster. Vanilla JS"`,
+                src: "http://openapi.surge.sh/"
+            },
+            {
+                time: "mar 2017",
+                image: openapiImg,
+                course: "Kurs: JavaScript 2",
+                task: `"Skapa en applikation som hämtar data från öppna API:er. Fokus på Ajax och designmönster. Vanilla JS"`,
+                src: "http://openapi.surge.sh/"
+            },
+            {
+                time: "feb 2017",
+                image: databaseImg,
+                course: "Kurs: JavaScript 2",
+                task: `"Skapa en applikation som är en filmdatabas. Fokus på designmönster, Vanilla JS"`,
+                src: "https://ninasjoberg.github.io/MovieDatabase/"
+            },
+            {
+                time: "jan 2017",
+                image: vanillaImg,
+                course: "Kurs: HTML & Css",
+                task: `"Ska en websida för er egna fiktiva webbyrå. Fokus på responsivitet"`,
+                src: "https://ninasjoberg.github.io/vanilla/"
+            },
+            {
+                time: "nov 2016",
+                image: plantifyImg,
+                course: "Kurs: HTML & Css",
+                task: `"Skapa en enkel webbsida för fiktiva företaget Plantify"`,
+                src: "https://ninasjoberg.github.io/Plantify/"
+            },
+            {
+                time: "okt 2016",
+                image: todoImg,
+                course: "Kurs: JavaScript 1",
+                task: `"Skapa en ToDo-app i Vanilla JS"`,
+                src: "https://ninasjoberg.github.io/ToDo-List/"
+            },
+            {
+                time: "okt 2016",
+                image: foodGeneratorImg,
+                course: "Kurs: JavaScript 1",
+                task: `"Skapa en sida som genererar recept i Vanilla JS"`,
+                src: "https://ninasjoberg.github.io/Middagstips/"
+            },
+        ]
+
+        const projects = projectsArray.map((project, index) => {
+            console.log(project);
+            return <Project time={project.time} img={project.image} course={project.course} task={project.task} src={project.src}/>
+        })
+
         return(
-            <div className="home-main">
-                <h1>Frontend By Nina</h1>
+            <div className="projects">
+                <section className="timeline">
+                    <ul>
+                        {projects}
+                    </ul>
+                </section>
             </div>
         );
     }
