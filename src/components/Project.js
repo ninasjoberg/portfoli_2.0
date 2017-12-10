@@ -14,7 +14,7 @@ export default function Project (props) {
                     <figure className="hover-box">
                         <p>{props.course}</p>
                         <p>{props.task}</p>
-                        <a href={props.src}>Länk till sidan</a>
+                        {props.src && <a href={props.src}>Länk till sidan</a>}
                     </figure>
                 </section>
             </div>

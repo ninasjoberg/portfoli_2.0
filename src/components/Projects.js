@@ -8,6 +8,7 @@ import todoImg from '../images/todo_list.jpg';
 import vanillaImg from '../images/vanilla.jpg';
 import challenger from '../images/challenger.jpg';
 import portfolio1Img from '../images/portfolio1.jpg';
+import phpBlogImg from '../images/php_blog.jpg';
 import './projects.css';
 
 
@@ -27,10 +28,9 @@ export default class Projects extends Component{
             },
             {
                 time: "maj 2017",
-                image: "",
-                course: "Kurs: JavaScript 2",
-                task: `"Skapa en applikation som hämtar data från öppna API:er. Fokus på Ajax och designmönster. Vanilla JS"`,
-                src: "http://openapi.surge.sh/"
+                image: phpBlogImg,
+                course: "Kurs: CMS, PHP och MySQL",
+                task: `"Skapa en blog som fungerar som ett cms där användaren kan lägga till, editera och ta bort info. PHP och MySQL."`,
             },
             {
                 time: "mar 2017",
