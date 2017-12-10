@@ -7,7 +7,7 @@ export default function Project (props) {
 
     return (
         <li>
-            <div>
+            <div className="project-wrapper">
                 <time>{props.time}</time>
                 <section className="box" onClick="">
                     <img className="img-project" src={props.img}/>

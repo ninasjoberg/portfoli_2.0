@@ -7,6 +7,7 @@ import plantifyImg from '../images/plantify.jpg';
 import todoImg from '../images/todo_list.jpg';
 import vanillaImg from '../images/vanilla.jpg';
 import challenger from '../images/challenger.jpg';
+import portfolio1Img from '../images/portfolio1.jpg';
 import './projects.css';
 
 
@@ -21,7 +22,7 @@ export default class Projects extends Component{
                 time: "sep 2017",
                 image: challenger,
                 course: "Kurs: JavaScript 3",
-                task: `"Skapa en applikation i React där användare kan logga in och ut, lagra och hämta info i Firebase."`,
+                task: `"Skapa en applikation i React där användare kan logga in och ut samt interagera med andra. Skapa och använd dig av en databas i Firebase."`,
                 src: "https://challenger-app.now.sh"
             },
             {
@@ -49,8 +50,15 @@ export default class Projects extends Component{
                 time: "jan 2017",
                 image: vanillaImg,
                 course: "Kurs: HTML & Css",
-                task: `"Ska en websida för er egna fiktiva webbyrå. Fokus på responsivitet"`,
+                task: `"Skapa en websida för er egna fiktiva webbyrå. Fokus på responsivitet"`,
                 src: "https://ninasjoberg.github.io/vanilla/"
+            },
+            {
+                time: "dec 2016",
+                image: portfolio1Img,
+                course: "Eget projekt",
+                task: `En portfolio för att samla mina projekt och använda vid sök av praktik. Vanilla JS.`,
+                src: "https://ninasjoberg.github.io/index.html"
             },
             {
                 time: "nov 2016",
